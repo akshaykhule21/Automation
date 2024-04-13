@@ -7,8 +7,9 @@ import org.openqa.selenium.WebElement;
 
 import Repository.ObjPrequotes;
 import driver.DriverFactory;
+import testDataManager.TestData;
 
-public class CommonFunctionsV2 {
+public class CommonFunctionsV2 extends TestData{
 	private WebDriver driver;
 	private Utility ut = new Utility(DriverFactory.getDriver());
 	public CommonFunctionsV2(WebDriver driver) {
@@ -31,32 +32,32 @@ public class CommonFunctionsV2 {
 		return ut.getText(ObjPrequotes.prequotesheading);
 	}
 		
-	public void selectCityandRTo(String city,String Rto) throws InterruptedException {
-		ut.useforloop(ObjPrequotes.city, city);	
+	public void selectCityandRTo() throws InterruptedException {
+		ut.useforloop(ObjPrequotes.city, getCity());	
 		Thread.sleep(300);
-		ut.useforloop(ObjPrequotes.rto,Rto);
+		ut.useforloop(ObjPrequotes.rto,getRto());
 	}
 
-	public void selectMake(String make) {
+	public void selectMake() {
 		List<WebElement> options = driver.findElements(ObjPrequotes.makes);
-		ut.useForLoop(options, "class", make);
+		ut.useForLoop(options, "class", getMake());
 	}
 	
-	public void selectModel(String model) {
-		ut.useforloop(ObjPrequotes.models,model);
+	public void selectModel() {
+		ut.useforloop(ObjPrequotes.models,getModel());
 	}
 		
-	public void selectFuelType(String type) {
+	public void selectFuelType() {
 		List<WebElement> s1 = driver.findElements(ObjPrequotes.fueltypes);
-		ut.useForLoop(s1, "id", type);
+		ut.useForLoop(s1, "id", getFuelType());
 	}
 	
-	public void selectVarient(String varient) {
+	public void selectVarient() {
 		ut.click(ObjPrequotes.varients);
 	}
 	
-	public void selectRegYear(String year) {
-		ut.useforloop(ObjPrequotes.regyears,year);	
+	public void selectRegYear() {
+		ut.useforloop(ObjPrequotes.regyears,getRegYear());	
 	}
 	
 	public void setName(String name) {

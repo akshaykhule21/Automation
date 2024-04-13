@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 
 
 public class ObjPrequotes {
+	
+	public static By citypath=By.xpath("//ul[@class='slideInRight animated5 rto-list']//span");
 
 	public static By carnum=By.id("regNoTextBox");
 	public static By viewpricesbtn1=By.id("spanGetQuote");

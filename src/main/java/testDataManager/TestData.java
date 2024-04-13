@@ -8,7 +8,7 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
 import io.qameta.allure.Allure;
 
-public class ExcelDataReader {
+public class TestData {
 	// Thread local is used for parallel purpose 	
 	// so when multiple threads open same variable can handle store diff value for there thread.
 	// Below data will come from excel and will be use in threadwise
@@ -72,7 +72,7 @@ public class ExcelDataReader {
 	
 	// this method has written just to check whether data comming from excel or not
 	public static void main(String[] args) throws InvalidFormatException, IOException {
-		ExcelDataReader a =new ExcelDataReader();
+		TestData a =new TestData();
 		a.excelDataReader("Proposal", 0);
 		System.out.println(a.getRegnum());
 		System.out.println(a.getCity());

@@ -41,48 +41,48 @@ public class Basic {
 	@When("User select City {string} and RTO {string}")
 	public void user_select_city_and_rto(String city, String rto) throws InterruptedException {
 		if(ut.isElementPresent( ObjPrequotes.cityrtopage)) {
-			CFV2.selectCityandRTo(city, rto);
+//			CFV2.selectCityandRTo(city, rto);
 		}
 	}
 
 	@When("User select make {string}")
 	public void user_select_make(String make) {
 		if(ut.isElementPresent( ObjPrequotes.makepage)) {
-			CFV2.selectMake(make);
+//			CFV2.selectMake(make);
 			}
 	}
 
 	@When("User select model {string}")
 	public void user_select_model(String model) {
 		if(ut.isElementPresent( ObjPrequotes.modelpage)) {
-			CFV2.selectModel(model);
+//			CFV2.selectModel(model);
 		}
 	}
 
 	@When("User select fueltype {string}")
 	public void user_select_fueltype(String type) {
 		if(ut.isElementPresent( ObjPrequotes.fuelpage)) {
-			CFV2.selectFuelType(type);
+//			CFV2.selectFuelType(type);
 		}
 	}
 
 	@When("User select varient {string}")
 	public void user_select_varient(String varient) {
 		if(ut.isElementPresent( ObjPrequotes.varientpage)) {
-			CFV2.selectVarient(varient);
+//			CFV2.selectVarient(varient);
 		}
 	}
 
 	@When("User select regyear {string}")
 	public void user_select_regyear(String year) {
 		if(ut.isElementPresent( ObjPrequotes.regyearpage)) {
-			CFV2.selectRegYear(year);
+//			CFV2.selectRegYear(year);
 		}
 	}
 	
 	@When("user select registration year {string}")
 	public void user_select_registration_year(String year) throws InterruptedException {
-		CFV2.selectRegYear(year);
+//		CFV2.selectRegYear(year);
 	}
 	
 	@And("User select expiry month {string} and day {string}")
